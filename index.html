@@ -12,11 +12,60 @@
 <nav class="nav" aria-label="Navegación principal"><div class="wrap nav-inner"><a class="brand" href="#inicio">Rubal<span>Erik</span>Creativo</a><div class="links"><a href="#proyectos">Proyectos</a><a href="#areas">Áreas</a><a href="#acerca">Acerca de</a></div></div></nav>
 <header id="inicio" class="hero"><div class="wrap"><div class="eyebrow">Electrónica · Automatización · Creatividad</div><h1>Ideas que se convierten en <span class="accent">proyectos reales.</span></h1><p class="lead">Explora proyectos Arduino, soluciones de ingeniería y prototipos funcionales. Aprende cómo funcionan y descarga los códigos para construir los tuyos.</p><div class="actions"><a class="btn" href="#proyectos">Explorar proyectos</a><a class="btn secondary" href="https://github.com/Rubalerik" target="_blank" rel="noopener noreferrer">Ver GitHub</a></div></div></header>
 <main>
-<section id="proyectos"><div class="wrap"><div class="section-head"><h2>Biblioteca de proyectos</h2><p>Códigos, documentación y recursos para aprender haciendo.</p></div><div class="grid"><article class="card"><span class="tag">Arduino · Código disponible</span><h3>🌱 Sistema de riego automático</h3><p>Control de riego mediante Arduino y sensor de humedad del suelo. Consulta el proyecto y descarga el archivo .ino.</p><a class="btn" href="https://github.com/Rubalerik/riego-automatico-arduino" target="_blank" rel="noopener noreferrer">Ver proyecto y código</a></article><article class="card muted"><span class="tag">Próximamente</span><h3>⚙️ Proyectos PLC Siemens</h3><p>Prácticas de automatización, lógica de control y tableros eléctricos.</p></article><article class="card muted"><span class="tag">Próximamente</span><h3>🧩 Impresión 3D funcional</h3><p>Diseño y fabricación de piezas, carcasas y mecanismos para prototipos.</p></article></div></div></section>
+<section id="proyectos"><div id="catalogo-proyectos"></div><div class="wrap"><div class="section-head"><h2>Biblioteca de proyectos</h2><p>Códigos, documentación y recursos para aprender haciendo.</p></div><div class="grid"><article class="card"><span class="tag">Arduino · Código disponible</span><h3>🌱 Sistema de riego automático</h3><p>Control de riego mediante Arduino y sensor de humedad del suelo. Consulta el proyecto y descarga el archivo .ino.</p><a class="btn" href="https://github.com/Rubalerik/riego-automatico-arduino" target="_blank" rel="noopener noreferrer">Ver proyecto y código</a></article><article class="card muted"><span class="tag">Próximamente</span><h3>⚙️ Proyectos PLC Siemens</h3><p>Prácticas de automatización, lógica de control y tableros eléctricos.</p></article><article class="card muted"><span class="tag">Próximamente</span><h3>🧩 Impresión 3D funcional</h3><p>Diseño y fabricación de piezas, carcasas y mecanismos para prototipos.</p></article></div></div></section>
 <section id="areas" class="about"><div class="wrap"><div class="section-head"><h2>Explora nuestras áreas</h2><p>Ingeniería práctica, desde la idea hasta el prototipo.</p></div><div class="grid"><div class="card"><span class="tag">01</span><h3>Arduino y electrónica</h3><p>Sensores, actuadores, circuitos y programación aplicada.</p></div><div class="card"><span class="tag">02</span><h3>Automatización industrial</h3><p>PLC, control, instrumentación e integración de sistemas.</p></div><div class="card"><span class="tag">03</span><h3>Diseño e impresión 3D</h3><p>Prototipos funcionales y soluciones mecánicas personalizadas.</p></div></div></div></section>
 <section id="acerca"><div class="wrap"><div class="section-head"><h2>Acerca de RubalErikCreativo</h2></div><p>Un espacio para compartir proyectos de ingeniería, tecnología y creatividad. La meta es transformar ideas en soluciones reales y facilitar que más personas aprendan construyendo.</p><div class="actions"><a class="btn secondary" href="https://github.com/Rubalerik" target="_blank" rel="noopener noreferrer">Explorar repositorios</a></div></div></section>
 </main>
 <footer><div class="wrap footer-inner"><span>© <span id="year">2026</span> RubalErikCreativo</span><span>Hecho para aprender, crear y compartir.</span></div></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  
+<script>
+async function cargarProyectos() {
+  const contenedor = document.getElementById("catalogo-proyectos");
+
+  if (!contenedor) return;
+
+  try {
+    const respuesta = await fetch("./proyectos.json");
+
+    if (!respuesta.ok) {
+      throw new Error("No se pudo cargar proyectos.json");
+    }
+
+    const proyectos = await respuesta.json();
+
+    contenedor.innerHTML = "";
+
+    proyectos.forEach(proyecto => {
+      const tarjeta = document.createElement("article");
+      tarjeta.className = "card";
+
+      const titulo = document.createElement("h3");
+      titulo.textContent = proyecto.titulo;
+
+      const descripcion = document.createElement("p");
+      descripcion.textContent = proyecto.descripcion;
+
+      const enlace = document.createElement("a");
+      enlace.href = proyecto.github;
+      enlace.textContent = "Ver proyecto y descargar código";
+      enlace.target = "_blank";
+      enlace.rel = "noopener noreferrer";
+      enlace.className = "button";
+
+      tarjeta.append(titulo, descripcion, enlace);
+      contenedor.appendChild(tarjeta);
+    });
+
+  } catch (error) {
+    console.error(error);
+    contenedor.textContent =
+      "No se pudieron cargar los proyectos. Intenta actualizar la página.";
+  }
+}
+
+cargarProyectos();
+</script>
+
 </body>
 </html>
