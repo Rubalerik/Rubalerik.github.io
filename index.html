@@ -81,5 +81,35 @@ async function cargarProyectos() {
 cargarProyectos();
 </script>
 
+<link
+  href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+  rel="stylesheet"
+/>
+
+<script type="module">
+  import { createChat } from
+    'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+  createChat({
+    webhookUrl:
+      'https://rubalerik-automation.app.n8n.cloud/webhook/8adac382-b48b-4bab-b477-288040ec4954/chat',
+    mode: 'window',
+    initialMessages: [
+      '¡Hola! 👋 Bienvenido a RubalErikCreativo.',
+      '¿Qué proyecto de Arduino estás buscando?'
+    ],
+    i18n: {
+      en: {
+        title: 'RubalErikCreativo 🤖',
+        subtitle: 'Arduino, automatización e impresión 3D',
+        footer: '',
+        getStarted: 'Iniciar conversación',
+        inputPlaceholder: 'Escribe tu pregunta aquí...',
+        closeButtonTooltip: 'Cerrar chat'
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
