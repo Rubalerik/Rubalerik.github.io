@@ -6,13 +6,29 @@
 <title>RubalErikCreativo | Ingeniería que inspira</title>
 <style>
 :root{color-scheme:dark;--bg:#070e1b;--panel:#101e32;--line:#233a53;--cyan:#47d7f8;--text:#f2f7ff;--muted:#a8bed3}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}a{color:inherit}a:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.nav{position:sticky;top:0;z-index:2;background:#091526ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 0}.brand{font-size:1.18rem;font-weight:800;text-decoration:none;letter-spacing:-.04em}.brand span,.accent{color:var(--cyan)}.links{display:flex;gap:22px;flex-wrap:wrap}.links a{text-decoration:none;color:var(--muted);font-size:.93rem}.links a:hover{color:var(--cyan)}.hero{position:relative;overflow:hidden;padding:110px 0 105px;background:radial-gradient(circle at 85% 20%,#104e77 0,transparent 36%),linear-gradient(135deg,#0b1425,#112b47)}.hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(transparent 97%,#47d7f81a 98%);background-size:100% 38px;opacity:.4}.hero .wrap{position:relative;z-index:1}.eyebrow{color:var(--cyan);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.77rem}.hero h1{font-size:clamp(2.7rem,7vw,5.7rem);letter-spacing:-.065em;line-height:1.08;margin:16px 0 24px;max-width:850px}.lead{font-size:1.13rem;color:#c9d9e9;max-width:680px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-block;border-radius:10px;padding:12px 20px;text-decoration:none;font-weight:750;border:1px solid var(--cyan);background:var(--cyan);color:#07121f}.btn.secondary{background:transparent;color:var(--cyan)}.btn:hover{filter:brightness(1.12)}section{padding:75px 0}.section-head{margin-bottom:26px}.section-head h2{font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.04em;margin:0 0 8px}.section-head p{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.card{background:linear-gradient(145deg,#12263d,#0d1b2e);border:1px solid var(--line);border-radius:18px;padding:25px;display:flex;flex-direction:column;min-height:270px}.card h3{font-size:1.35rem;margin:14px 0 8px}.card p{color:var(--muted);margin:0 0 22px}.card .btn{margin-top:auto;text-align:center}.tag{font-size:.75rem;color:var(--cyan);font-weight:750;text-transform:uppercase;letter-spacing:.09em}.card.muted{opacity:.8}.about{background:#0b1729;border-block:1px solid var(--line)}.about p{max-width:780px;color:var(--muted)}footer{padding:35px 0;color:var(--muted);font-size:.9rem}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-inner a{color:var(--cyan)}@media(max-width:760px){.nav-inner{align-items:flex-start;flex-direction:column}.links{gap:15px}.hero{padding:75px 0}.grid{grid-template-columns:1fr}section{padding:55px 0}}
+.upcoming-heading{margin:44px 0 18px;font-size:1.15rem;color:var(--muted)}.loading{color:var(--muted)}.card .tag{margin-bottom:6px}
 </style>
 </head>
 <body>
 <nav class="nav" aria-label="Navegación principal"><div class="wrap nav-inner"><a class="brand" href="#inicio">Rubal<span>Erik</span>Creativo</a><div class="links"><a href="#proyectos">Proyectos</a><a href="#areas">Áreas</a><a href="#acerca">Acerca de</a></div></div></nav>
 <header id="inicio" class="hero"><div class="wrap"><div class="eyebrow">Electrónica · Automatización · Creatividad</div><h1>Ideas que se convierten en <span class="accent">proyectos reales.</span></h1><p class="lead">Explora proyectos Arduino, soluciones de ingeniería y prototipos funcionales. Aprende cómo funcionan y descarga los códigos para construir los tuyos.</p><div class="actions"><a class="btn" href="#proyectos">Explorar proyectos</a><a class="btn secondary" href="https://github.com/Rubalerik" target="_blank" rel="noopener noreferrer">Ver GitHub</a></div></div></header>
 <main>
-<section id="proyectos"><div id="catalogo-proyectos"></div><div class="wrap"><div class="section-head"><h2>Biblioteca de proyectos</h2><p>Códigos, documentación y recursos para aprender haciendo.</p></div><div class="grid"><article class="card"><span class="tag">Arduino · Código disponible</span><h3>🌱 Sistema de riego automático</h3><p>Control de riego mediante Arduino y sensor de humedad del suelo. Consulta el proyecto y descarga el archivo .ino.</p><a class="btn" href="https://github.com/Rubalerik/riego-automatico-arduino" target="_blank" rel="noopener noreferrer">Ver proyecto y código</a></article><article class="card muted"><span class="tag">Próximamente</span><h3>⚙️ Proyectos PLC Siemens</h3><p>Prácticas de automatización, lógica de control y tableros eléctricos.</p></article><article class="card muted"><span class="tag">Próximamente</span><h3>🧩 Impresión 3D funcional</h3><p>Diseño y fabricación de piezas, carcasas y mecanismos para prototipos.</p></article></div></div></section>
+<section id="proyectos">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Biblioteca de proyectos</h2>
+      <p>Códigos, documentación y recursos para aprender haciendo.</p>
+    </div>
+    <div class="grid" id="catalogo-proyectos" aria-live="polite">
+      <p class="loading">Cargando proyectos...</p>
+    </div>
+    <h3 class="upcoming-heading">Próximamente</h3>
+    <div class="grid">
+      <article class="card muted"><span class="tag">Próximamente</span><h3>⚙️ Proyectos PLC Siemens</h3><p>Prácticas de automatización, lógica de control y tableros eléctricos.</p></article>
+      <article class="card muted"><span class="tag">Próximamente</span><h3>🧩 Impresión 3D funcional</h3><p>Diseño y fabricación de piezas, carcasas y mecanismos para prototipos.</p></article>
+    </div>
+  </div>
+</section>
 <section id="areas" class="about"><div class="wrap"><div class="section-head"><h2>Explora nuestras áreas</h2><p>Ingeniería práctica, desde la idea hasta el prototipo.</p></div><div class="grid"><div class="card"><span class="tag">01</span><h3>Arduino y electrónica</h3><p>Sensores, actuadores, circuitos y programación aplicada.</p></div><div class="card"><span class="tag">02</span><h3>Automatización industrial</h3><p>PLC, control, instrumentación e integración de sistemas.</p></div><div class="card"><span class="tag">03</span><h3>Diseño e impresión 3D</h3><p>Prototipos funcionales y soluciones mecánicas personalizadas.</p></div></div></div></section>
 <section id="acerca"><div class="wrap"><div class="section-head"><h2>Acerca de RubalErikCreativo</h2></div><p>Un espacio para compartir proyectos de ingeniería, tecnología y creatividad. La meta es transformar ideas en soluciones reales y facilitar que más personas aprendan construyendo.</p><div class="actions"><a class="btn secondary" href="https://github.com/Rubalerik" target="_blank" rel="noopener noreferrer">Explorar repositorios</a></div></div></section>
 </main>
@@ -21,49 +37,47 @@
   
 <script>
 async function cargarProyectos() {
-  const contenedor = document.getElementById("catalogo-proyectos");
-
+  const contenedor = document.getElementById('catalogo-proyectos');
   if (!contenedor) return;
-
   try {
-    const respuesta = await fetch("./proyectos.json");
-
-    if (!respuesta.ok) {
-      throw new Error("No se pudo cargar proyectos.json");
-    }
-
+    const respuesta = await fetch('./proyectos.json');
+    if (!respuesta.ok) throw new Error('Error HTTP ' + respuesta.status);
     const proyectos = await respuesta.json();
-
-    contenedor.innerHTML = "";
-
+    if (!Array.isArray(proyectos)) throw new Error('El catálogo debe ser una lista');
+    contenedor.replaceChildren();
+    if (proyectos.length === 0) {
+      const aviso = document.createElement('p');
+      aviso.textContent = 'Próximamente publicaremos nuevos proyectos.';
+      contenedor.append(aviso);
+      return;
+    }
     proyectos.forEach(proyecto => {
-      const tarjeta = document.createElement("article");
-      tarjeta.className = "card";
-
-      const titulo = document.createElement("h3");
-      titulo.textContent = proyecto.titulo;
-
-      const descripcion = document.createElement("p");
-      descripcion.textContent = proyecto.descripcion;
-
-      const enlace = document.createElement("a");
-      enlace.href = proyecto.github;
-      enlace.textContent = "Ver proyecto y descargar código";
-      enlace.target = "_blank";
-      enlace.rel = "noopener noreferrer";
-      enlace.className = "button";
-
-      tarjeta.append(titulo, descripcion, enlace);
-      contenedor.appendChild(tarjeta);
+      const tarjeta = document.createElement('article');
+      tarjeta.className = 'card';
+      const etiqueta = document.createElement('span');
+      etiqueta.className = 'tag';
+      etiqueta.textContent = (proyecto.categoria || 'Proyecto') + ' · Código disponible';
+      const titulo = document.createElement('h3');
+      titulo.textContent = proyecto.titulo || 'Proyecto sin título';
+      const descripcion = document.createElement('p');
+      descripcion.textContent = proyecto.descripcion || '';
+      tarjeta.append(etiqueta, titulo, descripcion);
+      if (typeof proyecto.github === 'string' && /^https:\/\/github\.com\//i.test(proyecto.github)) {
+        const enlace = document.createElement('a');
+        enlace.className = 'btn';
+        enlace.href = proyecto.github;
+        enlace.textContent = 'Ver proyecto y descargar código';
+        enlace.target = '_blank';
+        enlace.rel = 'noopener noreferrer';
+        tarjeta.append(enlace);
+      }
+      contenedor.append(tarjeta);
     });
-
   } catch (error) {
-    console.error(error);
-    contenedor.textContent =
-      "No se pudieron cargar los proyectos. Intenta actualizar la página.";
+    console.error('No se pudo cargar el catálogo:', error);
+    contenedor.textContent = 'No se pudieron cargar los proyectos. Intenta actualizar la página.';
   }
 }
-
 cargarProyectos();
 </script>
 
