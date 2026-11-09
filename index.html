@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RubalErikCreativo | Ingeniería y Tecnología</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #08111f;
+      color: #f4f8ff;
+      line-height: 1.6;
+    }
+    header {
+      padding: 70px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #08111f, #123b65);
+    }
+    h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin: 0; }
+    h2 { color: #53d8ff; }
+    .accent { color: #53d8ff; }
+    .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+    .card {
+      background: #11243a;
+      border: 1px solid #244963;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 20px 0;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #00bdf2;
+      color: #06111c;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      margin-top: 12px;
+    }
+    .button:hover { background: #75e5ff; }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #9eb3c9;
+      border-top: 1px solid #244963;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rubal<span class="accent">Erik</span>Creativo</h1>
+    <p>Arduino · Automatización · Impresión 3D · Ingeniería</p>
+    <a class="button" href="#proyectos">Explorar proyectos</a>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Bienvenido</h2>
+      <p>
+        Explora proyectos de electrónica, programación Arduino,
+        automatización industrial e impresión 3D.
+        Aprende, construye y descarga códigos de nuestros proyectos.
+      </p>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos Arduino</h2>
+      <article class="card">
+        <h3>Sistema de riego automático</h3>
+        <p>
+          Automatiza el riego de plantas utilizando Arduino
+          y un sensor de humedad del suelo.
+        </p>
+        <a class="button"
+           href="https://github.com/Rubalerik/riego-automatico-arduino"
+           target="_blank" rel="noopener noreferrer">
+          Ver proyecto y descargar código
+        </a>
+      </article>
+    </section>
+
+    <section>
+      <h2>Próximamente</h2>
+      <div class="card">
+        Proyectos PLC Siemens, impresión 3D y automatizaciones con IA.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © RubalErikCreativo · Ingeniería, creatividad y tecnología
+  </footer>
+</body>
+</html>
