@@ -1,1 +1,18 @@
 
+[
+  {
+    "id": "riego-automatico",
+    "titulo": "Sistema de riego automático",
+    "categoria": "Arduino",
+    "descripcion": "Sistema de riego automático con Arduino, sensor de humedad y bomba de agua.",
+    "componentes": [
+      "Arduino UNO",
+      "Sensor de humedad",
+      "Bomba de agua",
+      "Transistor"
+    ],
+    "github": "https://github.com/Rubalerik/riego-automatico-arduino",
+    "youtube": ""
+  }
+]
+
