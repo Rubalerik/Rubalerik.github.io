@@ -1,97 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RubalErikCreativo | Ingeniería y Tecnología</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #08111f;
-      color: #f4f8ff;
-      line-height: 1.6;
-    }
-    header {
-      padding: 70px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #08111f, #123b65);
-    }
-    h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin: 0; }
-    h2 { color: #53d8ff; }
-    .accent { color: #53d8ff; }
-    .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
-    .card {
-      background: #11243a;
-      border: 1px solid #244963;
-      border-radius: 16px;
-      padding: 24px;
-      margin: 20px 0;
-    }
-    .button {
-      display: inline-block;
-      padding: 12px 20px;
-      background: #00bdf2;
-      color: #06111c;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      margin-top: 12px;
-    }
-    .button:hover { background: #75e5ff; }
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #9eb3c9;
-      border-top: 1px solid #244963;
-    }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="RubalErikCreativo: proyectos Arduino, automatización, PLC e impresión 3D. Descarga códigos y aprende construyendo.">
+<title>RubalErikCreativo | Ingeniería que inspira</title>
+<style>
+:root{color-scheme:dark;--bg:#070e1b;--panel:#101e32;--line:#233a53;--cyan:#47d7f8;--text:#f2f7ff;--muted:#a8bed3}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}a{color:inherit}a:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.nav{position:sticky;top:0;z-index:2;background:#091526ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 0}.brand{font-size:1.18rem;font-weight:800;text-decoration:none;letter-spacing:-.04em}.brand span,.accent{color:var(--cyan)}.links{display:flex;gap:22px;flex-wrap:wrap}.links a{text-decoration:none;color:var(--muted);font-size:.93rem}.links a:hover{color:var(--cyan)}.hero{position:relative;overflow:hidden;padding:110px 0 105px;background:radial-gradient(circle at 85% 20%,#104e77 0,transparent 36%),linear-gradient(135deg,#0b1425,#112b47)}.hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(transparent 97%,#47d7f81a 98%);background-size:100% 38px;opacity:.4}.hero .wrap{position:relative;z-index:1}.eyebrow{color:var(--cyan);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.77rem}.hero h1{font-size:clamp(2.7rem,7vw,5.7rem);letter-spacing:-.065em;line-height:1.08;margin:16px 0 24px;max-width:850px}.lead{font-size:1.13rem;color:#c9d9e9;max-width:680px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-block;border-radius:10px;padding:12px 20px;text-decoration:none;font-weight:750;border:1px solid var(--cyan);background:var(--cyan);color:#07121f}.btn.secondary{background:transparent;color:var(--cyan)}.btn:hover{filter:brightness(1.12)}section{padding:75px 0}.section-head{margin-bottom:26px}.section-head h2{font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.04em;margin:0 0 8px}.section-head p{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.card{background:linear-gradient(145deg,#12263d,#0d1b2e);border:1px solid var(--line);border-radius:18px;padding:25px;display:flex;flex-direction:column;min-height:270px}.card h3{font-size:1.35rem;margin:14px 0 8px}.card p{color:var(--muted);margin:0 0 22px}.card .btn{margin-top:auto;text-align:center}.tag{font-size:.75rem;color:var(--cyan);font-weight:750;text-transform:uppercase;letter-spacing:.09em}.card.muted{opacity:.8}.about{background:#0b1729;border-block:1px solid var(--line)}.about p{max-width:780px;color:var(--muted)}footer{padding:35px 0;color:var(--muted);font-size:.9rem}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-inner a{color:var(--cyan)}@media(max-width:760px){.nav-inner{align-items:flex-start;flex-direction:column}.links{gap:15px}.hero{padding:75px 0}.grid{grid-template-columns:1fr}section{padding:55px 0}}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Rubal<span class="accent">Erik</span>Creativo</h1>
-    <p>Arduino · Automatización · Impresión 3D · Ingeniería</p>
-    <a class="button" href="#proyectos">Explorar proyectos</a>
-  </header>
-
-  <main class="container">
-    <section>
-      <h2>Bienvenido</h2>
-      <p>
-        Explora proyectos de electrónica, programación Arduino,
-        automatización industrial e impresión 3D.
-        Aprende, construye y descarga códigos de nuestros proyectos.
-      </p>
-    </section>
-
-    <section id="proyectos">
-      <h2>Proyectos Arduino</h2>
-      <article class="card">
-        <h3>Sistema de riego automático</h3>
-        <p>
-          Automatiza el riego de plantas utilizando Arduino
-          y un sensor de humedad del suelo.
-        </p>
-        <a class="button"
-           href="https://github.com/Rubalerik/riego-automatico-arduino"
-           target="_blank" rel="noopener noreferrer">
-          Ver proyecto y descargar código
-        </a>
-      </article>
-    </section>
-
-    <section>
-      <h2>Próximamente</h2>
-      <div class="card">
-        Proyectos PLC Siemens, impresión 3D y automatizaciones con IA.
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © RubalErikCreativo · Ingeniería, creatividad y tecnología
-  </footer>
+<nav class="nav" aria-label="Navegación principal"><div class="wrap nav-inner"><a class="brand" href="#inicio">Rubal<span>Erik</span>Creativo</a><div class="links"><a href="#proyectos">Proyectos</a><a href="#areas">Áreas</a><a href="#acerca">Acerca de</a></div></div></nav>
+<header id="inicio" class="hero"><div class="wrap"><div class="eyebrow">Electrónica · Automatización · Creatividad</div><h1>Ideas que se convierten en <span class="accent">proyectos reales.</span></h1><p class="lead">Explora proyectos Arduino, soluciones de ingeniería y prototipos funcionales. Aprende cómo funcionan y descarga los códigos para construir los tuyos.</p><div class="actions"><a class="btn" href="#proyectos">Explorar proyectos</a><a class="btn secondary" href="https://github.com/Rubalerik" target="_blank" rel="noopener noreferrer">Ver GitHub</a></div></div></header>
+<main>
+<section id="proyectos"><div class="wrap"><div class="section-head"><h2>Biblioteca de proyectos</h2><p>Códigos, documentación y recursos para aprender haciendo.</p></div><div class="grid"><article class="card"><span class="tag">Arduino · Código disponible</span><h3>🌱 Sistema de riego automático</h3><p>Control de riego mediante Arduino y sensor de humedad del suelo. Consulta el proyecto y descarga el archivo .ino.</p><a class="btn" href="https://github.com/Rubalerik/riego-automatico-arduino" target="_blank" rel="noopener noreferrer">Ver proyecto y código</a></article><article class="card muted"><span class="tag">Próximamente</span><h3>⚙️ Proyectos PLC Siemens</h3><p>Prácticas de automatización, lógica de control y tableros eléctricos.</p></article><article class="card muted"><span class="tag">Próximamente</span><h3>🧩 Impresión 3D funcional</h3><p>Diseño y fabricación de piezas, carcasas y mecanismos para prototipos.</p></article></div></div></section>
+<section id="areas" class="about"><div class="wrap"><div class="section-head"><h2>Explora nuestras áreas</h2><p>Ingeniería práctica, desde la idea hasta el prototipo.</p></div><div class="grid"><div class="card"><span class="tag">01</span><h3>Arduino y electrónica</h3><p>Sensores, actuadores, circuitos y programación aplicada.</p></div><div class="card"><span class="tag">02</span><h3>Automatización industrial</h3><p>PLC, control, instrumentación e integración de sistemas.</p></div><div class="card"><span class="tag">03</span><h3>Diseño e impresión 3D</h3><p>Prototipos funcionales y soluciones mecánicas personalizadas.</p></div></div></div></section>
+<section id="acerca"><div class="wrap"><div class="section-head"><h2>Acerca de RubalErikCreativo</h2></div><p>Un espacio para compartir proyectos de ingeniería, tecnología y creatividad. La meta es transformar ideas en soluciones reales y facilitar que más personas aprendan construyendo.</p><div class="actions"><a class="btn secondary" href="https://github.com/Rubalerik" target="_blank" rel="noopener noreferrer">Explorar repositorios</a></div></div></section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year">2026</span> RubalErikCreativo</span><span>Hecho para aprender, crear y compartir.</span></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
